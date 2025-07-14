@@ -3,9 +3,4 @@
 usr = h(get.user)
 ip = h(get.public(ip)) # Use handler H()... and auxiliary get.
 hostname = h(get.hostname)
-dtime = h(get.date)
-  
-localhost_f() {
-   if ."{ip}" != "127.0.0.1":
-          echo f"[{usr}]: Ip {ip} no match."
-          take with(log.file(".results"), content(f"Debugged at: {dtime}. Ip: {ip}, User: {usr}")) }
+ctime = h(get.date)
